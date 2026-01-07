@@ -22,6 +22,7 @@ import {
   Trophy,
   Heart,
 } from 'lucide-react'
+import RichContent from './shared/RichContent'
 
 export default function ReviewPetition() {
   const { id } = useParams<{ id: string }>()
@@ -220,7 +221,7 @@ export default function ReviewPetition() {
                 </div>
 
                 <div className="prose max-w-none">
-                  <div dangerouslySetInnerHTML={{ __html: petition.description }} />
+                  <RichContent content={petition.description} />
                 </div>
 
                 {/* Petition Stats */}
