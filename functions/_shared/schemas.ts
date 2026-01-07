@@ -37,8 +37,7 @@ const basePetitionFields = {
     })
     .int('Target count must be an integer')
     .min(1, 'Target count must be at least 1')
-    .max(1000000, 'Target count must not exceed 1,000,000')
-    .default(1000),
+    .max(1000000, 'Target count must not exceed 1,000,000'),
 
   category_ids: z
     .array(
@@ -54,6 +53,7 @@ const basePetitionFields = {
 export const createPetitionSchema = z
   .object({
     ...basePetitionFields,
+    target_count: basePetitionFields.target_count.default(1000),
     created_by: z.string(),
   })
   // validate location is required when type is 'local'
