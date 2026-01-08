@@ -19,8 +19,8 @@ tests/
 
 ### Test Files
 
-- **`create-petition-validation.test.ts`** - Tests for createPetitionSchema validation
-- **`update-petition-validation.test.ts`** - Tests for updatePetitionSchema validation
+- **`create-petition.test.ts`** - Tests for createPetitionSchema validation
+- **`update-petition.test.ts`** - Tests for updatePetitionSchema validation
 - **`setup.test.ts`** - Vitest setup verification
 
 ### Running Unit Tests
